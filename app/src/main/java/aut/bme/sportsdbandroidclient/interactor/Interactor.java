@@ -61,7 +61,7 @@ public class Interactor {
     public void getMatchResult(long eventId){
         GetMatchResult result = new GetMatchResult();
         try {
-            Call<Event> matchQueryCall = eventApi.getLast15EventsByLeagueId(eventId);
+            Call<Event> matchQueryCall = eventApi.getEventById(eventId);
 
             Response<Event> response = matchQueryCall.execute();
             if (response.code() != 200) {

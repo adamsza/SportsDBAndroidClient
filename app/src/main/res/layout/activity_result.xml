@@ -5,5 +5,104 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.result.ResultActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimaryDark"
+            android:elevation="4dp"
+            android:theme="@style/Theme.SportsDBAndroidClient.AppBarOverlay"
+            app:popupTheme="@style/Theme.SportsDBAndroidClient.PopupOverlay"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <ImageView
+                android:id="@+id/result_thumb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/league_table"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="0,1">
 
+                <TableRow
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/home_score"
+                        android:layout_height="150dp"
+                        android:padding="3dip"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:textSize="40sp"
+                        android:background="#FFE6E6E6" />
+                    <TextView
+                        android:id="@+id/away_score"
+                        android:layout_height="150dp"
+                        android:padding="3dip"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:textSize="40dp"
+                        android:background="#FFE6E6E6" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/home_team"
+                        android:layout_height="50dp"
+                        android:padding="3dip"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:textSize="15sp"
+                        android:background="#FFE6E6E6" />
+                    <TextView
+                        android:id="@+id/away_team"
+                        android:layout_height="50dp"
+                        android:padding="3dip"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:textSize="15dp"
+                        android:background="#FFE6E6E6" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/home_formation"
+                        android:layout_height="50dp"
+                        android:padding="3dip"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:textSize="15sp"
+                        android:background="#FFE6E6E6" />
+                    <TextView
+                        android:id="@+id/away_formation"
+                        android:layout_height="50dp"
+                        android:padding="3dip"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:textSize="15dp"
+                        android:background="#FFE6E6E6" />
+
+                </TableRow>
+            </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
